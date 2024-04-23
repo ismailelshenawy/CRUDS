@@ -1,40 +1,34 @@
-
-
-var name1 = document.getElementById('nameJ');
-var age = document.getElementById('numJ');
-var skills = document.getElementById('masJ');
-// mainList = [];
+var name1 = document.getElementById("nameJ");
+var age = document.getElementById("numJ");
+var skills = document.getElementById("masJ");
+//  var mainList = [];
 var mainList;
-if (localStorage.getItem('mainList') !== null) {
-    mainList = JSON.parse(localStorage.getItem('mainList'));
-    displaylist();
-  
+if (localStorage.getItem("mainList") !== null) {
+  mainList = JSON.parse(localStorage.getItem("mainList"));
+  displaylist();
+} else {
+  mainList = [];
 }
-else {
-    mainList = [];
-  
-}
-var  tableBady = document.getElementById("tableDisplay"); 
+var tableBady = document.getElementById("tableDisplay");
 
-function clickJ(){
-  
-    var listJs = {
-        name: name1.value,
-        age: Number(age.value),
-        skills: skills.value
-    };
-    // لتخزين الاراى
-    mainList.push(listJs)
-    localStorage.setItem('mainList',JSON.stringify(mainList));
-    // لعرض الارارى 
-    // console.log(mainList)
-    displaylist()
-} 
+function clickJ() {
+  var listJs = {
+    name: name1.value,
+    age: Number(age.value),
+    skills: skills.value,
+  };
+  // لتخزين الاراى
+  mainList.push(listJs);
+  localStorage.setItem("mainList", JSON.stringify(mainList));
+  // لعرض الارارى
+
+  displaylist();
+}
 
 function displaylist() {
-    var tableJS =``;
-    for (let index = 0; index < mainList.length; index++) {
-        tableJS += `
+  var tableJS = ``;
+  for (let index = 0; index < mainList.length; index++) {
+    tableJS += `
         <tr>
         <td scope="row"> ${index}</td>
         <td>${mainList[index].name}</td>
@@ -43,16 +37,7 @@ function displaylist() {
         <td><button></button>delete</td>
         <td><button></button>edite</td>
       </tr>
-        `
-
-        
-    }
-    tableBady.innerHTML = tableJS;
-    
+        `;
+  }
+  tableBady.innerHTML = tableJS;
 }
-  
-
-
-
-
-
