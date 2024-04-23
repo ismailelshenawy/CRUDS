@@ -62,6 +62,11 @@ function displaylist() {
 
 function delBtn(index) {
   console.log("hello");
-  mainList.splice(index,1)
+  mainList.splice(index, 1)
+localStorage.setItem("mainList", JSON.stringify(mainList));
   displaylist();
+}
+
+function searchBtn(keysearch) {
+  console.log(keysearch);
 }
