@@ -2,6 +2,7 @@ var name1 = document.getElementById("nameJ");
 var age = document.getElementById("numJ");
 var skills = document.getElementById("masJ");
 //  var mainList = [];
+var tableBady = document.getElementById("tableDisplay");
 var mainList;
 if (localStorage.getItem("mainList") !== null) {
   mainList = JSON.parse(localStorage.getItem("mainList"));
@@ -9,7 +10,7 @@ if (localStorage.getItem("mainList") !== null) {
 } else {
   mainList = [];
 }
-var tableBady = document.getElementById("tableDisplay");
+
 
 function clickJ() {
   var listJs = {
@@ -26,6 +27,24 @@ function clickJ() {
 }
 
 function displaylist() {
+//   var tableJS = ``;
+//   for (var iteam of mainList) {
+//     tableJS += `
+//         <tr>
+//         <td scope="row">1</td>
+//         <td>${iteam.name}</td>
+//         <td>${iteam.age}</td>
+//         <td>${iteam.skills}</td>
+//         <td><button></button>delete</td>
+//         <td><button></button>edite</td>
+//       </tr>
+//         `;
+//   }
+
+  // tableBady.innerHTML = tableJS;
+  
+  // -------------------------------------
+
   var tableJS = ``;
   for (let index = 0; index < mainList.length; index++) {
     tableJS += `
