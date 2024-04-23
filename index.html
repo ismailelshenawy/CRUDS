@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruds</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form class="justify-content-center flex-column">
+      <label for="nameJ" class="d-block">name</label>
+      <input type="text" id="nameJ" class="d-block " />
+      <label for="numJ" class="d-block">number</label>
+      <input type="number" id="numJ" class="d-block" />
+      <label for="masJ" class="d-block">massage</label>
+      <input type="text" id="masJ" class="d-block" />
+      <button class="d-block" onclick="clickJ()" type="button">save</button>
+    </form>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">name</th>
+          <th scope="col">age</th>
+          <th scope="col">skills</th>
+          <th scope="col">delete</th>
+          <th scope="col">edit</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableDisplay"></tbody>
+    </table>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/xando.js"></script>
+  </body>
+</html>

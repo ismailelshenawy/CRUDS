@@ -1,0 +1,16 @@
+
+*{
+    box-sizing: border-box;
+}
+.hover:hover{
+    background: blue !important;
+}
+.hover{
+    transition: all,1,ease;
+}
+.game{
+    height: 400px;
+}
+.fs-32-2{
+    font-size: 50px;
+}
