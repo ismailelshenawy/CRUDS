@@ -8,21 +8,27 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body >
+  <body><div class="w-75 m-auto">
     <form class="justify-content-center flex-column">
       <label for="nameJ" class="d-block">name</label>
-      <input type="text" id="nameJ" class="d-block " />
+      <input type="text" id="nameJ" class="d-block" />
       <label for="numJ" class="d-block">number</label>
       <input type="number" id="numJ" class="d-block" />
       <label for="masJ" class="d-block">massage</label>
       <input type="text" id="masJ" class="d-block" />
-      <button class="d-block btn btn-primary" onclick="clickJ()" type="button">save</button>
+      <button class="d-block btn btn-primary" onclick="clickJ()" type="button">
+        save
+      </button>
     </form>
     <form action="" class="w-75 m-auto justify-content-center d-flex">
-   
-        <input type="text" onkeyup="searchBtn(value)" class="w-100" placeholder="Search..">
+      <input
+        type="text"
+        onkeyup="searchBtn(value)"
+        class="w-100"
+        placeholder="Search.."
+      />
     </form>
-        <table class="table">
+    <table class="table">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -33,6 +39,7 @@
           <th scope="col">edit</th>
         </tr>
       </thead>
+      </div>
 
       <tbody id="tableDisplay"></tbody>
     </table>
